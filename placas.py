@@ -6,6 +6,9 @@ url = 'http://192.168.1.2:8080/video'
 # Iniciar el objeto de captura de video
 cap = cv2.VideoCapture(url)
 
+cv2.namedWindow('Camara IP', cv2.WINDOW_NORMAL)
+cv2.resizeWindow('Camara IP', 640, 480)
+
 # Verificar si la captura se abrió correctamente
 if not cap.isOpened():
     print("Error al abrir la transmisión de la cámara.")
